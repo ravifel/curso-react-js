@@ -6,16 +6,12 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
-
 export default function Item(props) {
+  React.useEffect(() => {
+    console.log("O componente foi montado !!!");
+    //return () => console.log("O componente foi desmontado !!!");
+  }, []);
+
   return (
     <Card sx={{ minWidth: 275, margin: "1em" }}>
       <CardContent>
@@ -33,8 +29,13 @@ export default function Item(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={props.funcaoBotao}>Botão</Button>
+        <Button size="small" onClick={props.funcaoBotao}>
+          Botão
+        </Button>
       </CardActions>
     </Card>
   );
 }
+
+//o "useEffect" ajudaa controlar o componente de carregamento
+//rodar blocos de códigos de algum "State" for alterado
