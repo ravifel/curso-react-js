@@ -3,19 +3,13 @@ import "./App.css";
 import Item from "./Item";
 
 function App() {
-
-  function consoleTeste() {
-    console.log("foi !!!")
-  }
+  var news = ["Titulo 1", "Titulo 2", "Titulo 3", "Titulo 4"];
 
   return (
     <div>
-      <Item titulo="Noticia do dia !!!" subTitulo="Subtitulo da noticia do dia" funcaoBotao={consoleTeste}/>
-      <Item titulo="Noticia da semana !!!" subTitulo="Subtitulo da noticia da semana"/>
-      <Item titulo="Noticia da semana !!!" subTitulo="Subtitulo da noticia da semana"/>
-      <Item titulo="Noticia da semana !!!" subTitulo="Subtitulo da noticia da semana"/>
-      <Item titulo="Noticia da semana !!!" subTitulo="Subtitulo da noticia da semana"/>
-      <button onClick={consoleTeste}>Testando metodo no botão</button>
+      <Item titulo={news[0]}/>
+      <Item titulo={news[1]}/>
+      <Item titulo={news[2]}/>
     </div>
   );
 }
