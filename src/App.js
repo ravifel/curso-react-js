@@ -3,12 +3,15 @@ import "./App.css";
 import Item from "./Item";
 
 function App() {
-  var news = ["Titulo 1", "Titulo 2", "Titulo 3", "Titulo 4"];
+  var news = [
+    {titulo: "Titulo 1", subTitulo: "Subtitulo 1"},
+    {titulo: "Titulo 2", subTitulo: "Subtitulo 2"}
+  ];
 
   return (
     <div>
-      {news.map((tituloNoticia) => (
-        <Item titulo={tituloNoticia}/>
+      {news.map((noticia) => (
+        <Item titulo={noticia.titulo}  subTitulo={noticia.subTitulo}/>
       ))}
     </div>
   );
