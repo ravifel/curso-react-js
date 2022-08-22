@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div>
-      <Item titulo={news[0]}/>
-      <Item titulo={news[1]}/>
-      <Item titulo={news[2]}/>
+      {news.map((tituloNoticia) => (
+        <Item titulo={tituloNoticia}/>
+      ))}
     </div>
   );
 }
