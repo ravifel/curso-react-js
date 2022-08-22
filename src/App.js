@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div>
-      {news.map((noticia) => (
-        <Item titulo={noticia.titulo}  subTitulo={noticia.subTitulo}/>
+      {news.map((noticia, key) => (
+        <Item key={key} titulo={noticia.titulo}  subTitulo={noticia.subTitulo}/>
       ))}
     </div>
   );
