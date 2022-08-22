@@ -1,12 +1,8 @@
-import { useState } from "react";
-import News from "./pages/news/News";
-import Counter from "./pages/counter/Counter";
+import "./App.css";
+import Router from "./Router.jsx";
 
 function App() {
-  return (
-    // <News/>
-    <Counter />
-  );
+  return <Router />;
 }
 
 export default App;
